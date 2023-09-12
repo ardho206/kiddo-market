@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --body-color : #E4E9F7;
+    --nav-color : #FFFFFF;
+    --side-nav : #F1F1F1;
+    --text-color : #000000;
+    --search-bar : #F2F2F2;
+    --search-text : #010718;
+    --font-1 : 'Poppins', sans-serif;
+    --font-2 : 'Monserrat', sans-serif;
+}
+
+* {
+    font-family: var(--font-1);
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--body-color);
+}
+
+/* [data-bs-theme=dark] {
+
+    color-scheme: dark;
+
+    body {
+        background-color: #212529;
+    }
+
+    .navbar {
+        background-color: #212529;
+    }
+
+    .sidebar {
+        background-color: #212529;
+    }
+
+    .all,
+    .prod-title {
+        color: #fff;
+    }
+
+    .btn-login {
+        --bs-btn-border-color: gray;
+    }
+
+    .price-disc {
+        background-color: rgba(83, 83, 83, 0.6);
+    }
+
+    .price,
+    .disc {
+        color: #fff;
+    }
+
+    .favorite,
+    .cart {
+        color: gray;
+    }
+
+    .favorite:hover,
+    .cart:hover {
+        color: #fff;
+    }
+} */
+
+a .logo {
+    transition: .2s ease;
+}
+
+a:hover .logo{
+    transform: rotate(-6deg) scale(1.1);
+}
+
+.nav-bar {
+    font-weight: 500;
+}
+
+.carousel-inner .img {
+    height: 500px; /* Atur tinggi gambar sesuai keinginan Anda */
+    object-fit: cover; /* Agar gambar tidak terdistorsi */
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    color: #000;
+    transform: translateY(-50%);
+}
+
+.indicators {
+    position: absolute;
+    bottom: -40px;
+    z-index: 2;
+}
+
+.prev {
+    left: -25px;
+}
+
+.next {
+    right: -25px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent;
+}
+
+@media (max-width: 576px) {
+    .carousel-inner .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.card-prod {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    height: 280px;
+}
+.btn-like{
+    position: absolute;
+    right: -10px;
+    transform: translateY(-6px);
+}
+
+.prod-title {
+    font-family: var(--font-2);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.product-rating {
+    font-size: 18px;
+}
+
+.filled-star {
+    font-size: 18px;
+    color: gold;
+}
+
+.empty-star {
+    font-size: 18px;
+    color: gray;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-password {
+    display: none;
+}
+
+.theme {
+    z-index: 1500;
+}
+
+.zoom-effect:hover {
+    transition: opacity 0.3s ease;
+    transform: scale(1.1);
+}
+
+.custom-tooltip {
+    --bs-tooltip-border-radius: 0;
+    --bs-tooltip-max-width: 100%;
+    --bs-tooltip-arrow-height: 9px;
+    --bs-tooltip-arrow-width: 11px;
+}
+
+.sidebar {
+    height: 100%;
+}
+
+.rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+}
+
+.bi-star {
+    font-size: 20px; /* Adjust the size as needed */
+    color: gray; /* Default color for empty stars */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+input[type="radio"]:checked ~ .bi-star,
+input[type="radio"]:checked ~ .bi-star ~ .bi-star,
+input[type="radio"]:checked ~ .bi-star ~ .bi-star ~ .bi-star,
+input[type="radio"]:checked ~ .bi-star ~ .bi-star ~ .bi-star ~ .bi-star,
+input[type="radio"]:checked ~ .bi-star ~ .bi-star ~ .bi-star ~ .bi-star ~ .bi-star {
+    color: gold; /* Color for filled stars based on selection */
+}
+.favorite-button{
+    background-color: transparent;
+
+
+}
+
+.favorite-button .fav{
+    color: #F2F2F2;
+    opacity: 0.9;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.favorite-button:hover .fav{
+    color: #FF525E;
+}
+
+.sosmed {
+    background-color: transparent;
+}
+
+.price-disc {
+    background-color: #fafafa;
+}
+
+.all {
+    color: #000;
+}
+
+.card-container {
+    color: #fff;
+}
